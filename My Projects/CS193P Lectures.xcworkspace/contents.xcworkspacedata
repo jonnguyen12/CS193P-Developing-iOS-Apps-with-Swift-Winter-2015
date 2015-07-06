@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Project 4 - Smashtag"
+      name = "Project 4 - Smashtag">
+      <Group
+         location = "group:Smashtag"
+         name = "Smashtag">
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.xib">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Images.xcassets"
+            name = "Images.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:TweetTableViewCell.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TweetTableViewController.swift">
+         </FileRef>
+         <Group
+            location = "group:Twitter"
+            name = "Twitter">
+         </Group>
+         <Group
+            location = "group:Twitter Swift 1.2"
+            name = "Twitter Swift 1.2">
+            <FileRef
+               location = "group:MediaItem.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Tweet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:TwitterRequest.swift">
+            </FileRef>
+            <FileRef
+               location = "group:User.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:Smashtag.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:SmashtagTests"
+         name = "SmashtagTests">
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:SmashtagTests.swift">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:../../../SAMPLE CODE/Smashtag"
+      name = "Smashtag">
+      <Group
+         location = "group:Smashtag"
+         name = "Smashtag">
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.xib">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Images.xcassets"
+            name = "Images.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:TweetTableViewCell.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TweetTableViewController.swift">
+         </FileRef>
+         <Group
+            location = "group:Twitter"
+            name = "Twitter">
+            <FileRef
+               location = "group:MediaItem.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Tweet.swift">
+            </FileRef>
+            <FileRef
+               location = "group:TwitterRequest.swift">
+            </FileRef>
+            <FileRef
+               location = "group:User.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:Smashtag.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:SmashtagTests"
+         name = "SmashtagTests">
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:SmashtagTests.swift">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>

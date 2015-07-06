@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -55,6 +55,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-oP-Da1">
                                 <rect key="frame" x="409" y="104" width="175" height="30"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-Tg-yZt">
+                                <rect key="frame" x="509" y="346" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJe-up-XBy">
                                 <rect key="frame" x="509" y="375" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -73,12 +79,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="200" verticalCompressionResistancePriority="700" image="stanford" translatesAutoresizingMaskIntoConstraints="NO" id="djc-RE-0Kj">
                                 <rect key="frame" x="16" y="142" width="486" height="450"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-Tg-yZt">
-                                <rect key="frame" x="509" y="346" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -134,13 +134,13 @@
                             <mask key="constraints">
                                 <exclude reference="KUQ-OD-yfZ"/>
                                 <exclude reference="Ulu-8q-2LF"/>
-                                <exclude reference="c3n-ed-jHz"/>
                                 <exclude reference="3Yi-pC-upe"/>
                                 <exclude reference="Eyf-y6-adV"/>
                                 <exclude reference="xzV-6H-J2u"/>
                                 <exclude reference="XOz-ta-RHA"/>
                                 <exclude reference="frb-lL-rSp"/>
                                 <exclude reference="uje-wJ-LnW"/>
+                                <exclude reference="c3n-ed-jHz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -150,8 +150,6 @@
                                 <exclude reference="cyP-qq-Wwp"/>
                                 <exclude reference="nLQ-UI-s8n"/>
                                 <exclude reference="zYO-JX-7RJ"/>
-                                <exclude reference="EXW-19-R1t"/>
-                                <include reference="c3n-ed-jHz"/>
                                 <include reference="3Yi-pC-upe"/>
                                 <include reference="Eyf-y6-adV"/>
                                 <exclude reference="lDP-56-RWe"/>
@@ -163,6 +161,8 @@
                                 <include reference="frb-lL-rSp"/>
                                 <exclude reference="t0I-hZ-T3l"/>
                                 <include reference="uje-wJ-LnW"/>
+                                <exclude reference="EXW-19-R1t"/>
+                                <include reference="c3n-ed-jHz"/>
                             </mask>
                         </variation>
                     </view>
