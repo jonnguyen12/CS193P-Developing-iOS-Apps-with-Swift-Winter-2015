@@ -1,0 +1,112 @@
+//
+//  ImageViewController.swift
+//  Cassini
+//
+//  Created by Phuc Nguyen on 7/2/15.
+//  Copyright (c) 2015 Phuc Nguyen. All rights reserved.
+//
+
+import UIKit
+
+class ImageViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.contentSize = imageView.frame.size
+            scrollView.delegate = self
+            scrollView.minimumZoomScale = 0.03
+            scrollView.maximumZoomScale = 5.0
+        }
+    }
+    var imageURL: NSURL? {
+        didSet {
+            image = nil
+            if view.window != nil {
+                fetchImage()
+            }
+        }
+    }
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    private func fetchImage() {
+        if let url = imageURL {
+            spinner?.startAnimating()
+            let qos = NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1 ? Int(QOS_CLASS_USER_INITIATED.value) : DISPATCH_QUEUE_PRIORITY_HIGH
+            dispatch_async(dispatch_get_global_queue(qos, 0)) { () -> Void in
+                let imageData = NSData(contentsOfURL: url)
+                dispatch_async(dispatch_get_main_queue()) {
+                    if url == self.imageURL {
+                        if imageData != nil {
+                            self.image = UIImage(data: imageData!)
+                        } else {
+                            self.image = nil
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+    
+    
+    
+    private var imageView = UIImageView()
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        scrollViewDidScrollOrZoom = true
+    }
+    
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        scrollViewDidScrollOrZoom = true
+    }
+    
+    private var image: UIImage? {
+        get { return imageView.image }
+        set {
+            imageView.image = newValue
+            imageView.sizeToFit()
+            scrollView?.contentSize = imageView.frame.size
+            spinner?.stopAnimating()
+            scrollViewDidScrollOrZoom = false
+            autoScale()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        scrollView.addSubview(imageView)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if image == nil {
+            fetchImage()
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        autoScale()
+    }
+    
+    private var scrollViewDidScrollOrZoom = false
+    
+    private func autoScale() {
+        if scrollViewDidScrollOrZoom {
+            return
+        }
+        
+        if let sv = scrollView {
+            if image != nil {
+                sv.zoomScale = max(sv.bounds.size.height / image!.size.height, sv.bounds.size.width / image!.size.width)
+                sv.contentOffset = CGPoint(x: (imageView.frame.size.width - sv.frame.size.width) / 2, y: (imageView.frame.size.height - sv.frame.size.height) / 2)
+                scrollViewDidScrollOrZoom = false
+            }
+        }
+    }
+}
